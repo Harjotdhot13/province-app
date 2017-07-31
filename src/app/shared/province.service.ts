@@ -20,7 +20,7 @@ export class ProvinceService {
 
   getProvince(provinceCode: string): Observable<IProvince> {
     return this.getProvinces()
-      .map((provinces: IProvince[]) => provinces.find(p => provinceCode.indexOf(p.provinceCode) !== -1));
+      .map((provinces: IProvince[]) => provinces.find(p => p.provinceCode.indexOf(provinceCode) !== -1));
   }
 
   handleError(error: Response) {
