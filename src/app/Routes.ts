@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router'
-import { ProvinceListComponent } from "./provinces/province-list.component";
-import { ProvinceDetailComponent } from "./provinces/province-detail.component";
-import { Error404Component } from "./provinces/errors/404.component";
-import { ProvinceDetailActivator } from "./provinces/province-detail-activator.service";
-import { ProvinceListResolver } from "./provinces/province-list-resolver";
+import { ProvinceListComponent } from './provinces/province-list.component';
+import { ProvinceDetailComponent } from './provinces/province-detail.component';
+import { Error404Component } from './provinces/errors/404.component';
+import { ProvinceDetailActivator } from './provinces/province-detail-activator.service';
+import { ProvinceListResolver } from './provinces/province-list-resolver';
 
 export const appRoutes: Routes = [
   { path: 'provinces', component: ProvinceListComponent, resolve:{provinces: ProvinceListResolver}},
