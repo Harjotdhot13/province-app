@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
+import { NavbarComponent } from './provinces/navbar/navbar.component';
 import { ProvinceListComponent } from './provinces/province-list.component';
 import { ProvinceService } from './shared/province.service';
 import { appRoutes } from './Routes';
@@ -25,6 +26,7 @@ import { CitySortPipe } from './provinces/cities/city-sort.pipe';
   ],
   declarations: [
      AppComponent,
+     NavbarComponent,
      ProvinceListComponent,
      ProvinceDetailComponent,
      Error404Component,

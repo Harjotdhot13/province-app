@@ -4,6 +4,9 @@ body {
 .text-align-center {
   text-align: center;
 }
+.main-page-wrapper h2 {
+  margin-top: 0px;  
+}
 .pointer{
     cursor: pointer;
 }
@@ -11,11 +14,12 @@ body {
   margin-right: 4px;
 } 
 .heading-wrapper {
-  margin-top: 60px;
+  margin-top: 10px;
   margin-bottom: 60px;
   background: #337ab7;
   color: #fff;
   padding: 10px;
+  height: 60px;
 }
 @media (max-width: 768px) {
   .main-page-wrapper h2 {
