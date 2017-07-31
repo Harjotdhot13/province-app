@@ -1,0 +1,24 @@
+body {
+  background: #eee;
+}
+.text-align-center {
+  text-align: center;
+}
+.pointer{
+    cursor: pointer;
+}
+.margin-right-4 {
+  margin-right: 4px;
+} 
+.heading-wrapper {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: #337ab7;
+  color: #fff;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .main-page-wrapper h2 {
+    font-size: 22px;
+  }
+}
