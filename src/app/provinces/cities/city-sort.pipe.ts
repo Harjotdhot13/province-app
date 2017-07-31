@@ -1,6 +1,5 @@
-import {  PipeTransform, Pipe } from '@angular/core'
-import { ICity } from "../../shared/province.model";
-
+import {  PipeTransform, Pipe } from '@angular/core';
+import { ICity } from '../../shared/province.model';
 
 @Pipe({
   name: 'citySort'
@@ -8,15 +7,15 @@ import { ICity } from "../../shared/province.model";
 
 export class CitySortPipe implements PipeTransform {
   transform(value: ICity[], args?: any): any {
-    if(value != undefined) {
+    if (value != undefined) {
       return value.sort(function(a, b) {
-        if(a[args.property] < b[args.property]) {
-          return -1 * args.direction
+        if (a[args.property] < b[args.property]) {
+          return -1 * args.direction;
         }
-        else if( a[args.property] > b[args.property]){
+        else if ( a[args.property] > b[args.property]) {
           return 1 * args.direction;
         }
-        else{
+        else {
           return 0;
         }
       })
