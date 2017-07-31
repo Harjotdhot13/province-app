@@ -10,4 +10,4 @@ import { Component } from '@angular/core';
   </div>
   <router-outlet></router-outlet>`,
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  {}
