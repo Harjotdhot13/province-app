@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   template: `<div class="main-page-wrapper">
     <div class="heading-wrapper">
       <div class="col-xs-6 col-sm-4">
-        <button type="button" class="btn btn-primary btn-lg" (click)=homePage()>Home Page</button>
+        <button type="button" class="btn btn-primary btn-lg btn-custom" (click)=homePage()>Home Page</button>
       </div>
       <div class="col-xs-6 col-sm-8">
         <h2>Canada Census</h2>
