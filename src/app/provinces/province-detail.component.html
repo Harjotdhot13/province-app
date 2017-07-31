@@ -4,19 +4,37 @@
       <div class="panel-heading">List of Cities by Population
       </div>
       <div class="panel-body">
+
+
+        <div class="row" style="margin-bottom: 20px">
+          <div class="col-md-8" style="margin-bottom: 20px">
+              <span class="margin-right-4">Search:</span>
+              <span>
+                <input type="text" [(ngModel)]="listFilter"/>
+              </span>
+          </div>
+        </div>
         <div class="row">
           <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover">
               <thead class="thead-inverse">
                 <tr>
-                  <th>Name</th>
-                  <th>Population</th>
+                  <th class="pointer" (click)="sort('cityName')">Name
+                    <i class="glyphicon" [ngClass]="{ 'glyphicon-menu-up': (column == 'cityName' && !isDesc), 
+                                                        'glyphicon-menu-down': (column == 'cityName' && isDesc) }" aria-hidden="true">
+                    </i>
+                  </th>
+                  <th class="pointer" (click)="sort('cityPopulation')">Population
+                    <i class="glyphicon" [ngClass]="{ 'glyphicon-menu-up': (column == 'cityPopulation' && !isDesc), 
+                                                        'glyphicon-menu-down': (column == 'cityPopulation' && isDesc) }" aria-hidden="true">
+                    </i>
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let province of province?.topCities">
-                    <td>{{ province?.cityName }}</td>  
-                  <td>{{ province?.cityPopulation }}</td>  
+                <tr *ngFor="let province of province?.topCities |  cityFilter:listFilter | citySort: {property: column, direction: direction}">
+                    <td>{{ province.cityName }}</td>  
+                  <td>{{ province.cityPopulation }}</td>  
                 </tr>
               </tbody>
             </table>
@@ -24,9 +42,16 @@
         </div>
       </div>
       <div class="panel-footer">
-        <a class="btn btn-default" (click)="onBack()" style="width:80px">
-            <i class="glyphicon glyphicon-menu-left"></i> Back
-        </a>
+         <div class="row">
+          <div class="col-xs-3">
+            <a class="btn btn-default" (click)="onBack()" style="width:80px">
+                <i class="glyphicon glyphicon-menu-left"></i> Back
+            </a>
+          </div>
+          <div class="col-xs-9" *ngIf="listFilter">
+              <h6>Filtered by: {{listFilter}} </h6>
+          </div>
+        </div>
       </div>
     </div>
   </div>

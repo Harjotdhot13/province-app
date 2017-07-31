@@ -1,5 +1,5 @@
-import {  PipeTransform, Pipe } from '@angular/core'
-import { IProvince } from "../shared/province.model"
+import {  PipeTransform, Pipe } from '@angular/core';
+import { IProvince } from '../shared/province.model';
 
 
 @Pipe({
@@ -11,9 +11,9 @@ export class ProvinceSortPipe implements PipeTransform {
     if(value !== undefined) {
       return value.sort(function(a, b) {
         if(a[args.property] < b[args.property]) {
-          return -1 * args.direction
+          return -1 * args.direction;
         }
-        else if( a[args.property] > b[args.property]){
+        else if( a[args.property] > b[args.property]) {
           return 1 * args.direction;
         }
         else{

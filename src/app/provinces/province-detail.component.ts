@@ -12,6 +12,10 @@ import { Subscription }  from 'rxjs/Subscription';
 export class ProvinceDetailComponent implements OnInit {
   province: IProvince;
   errorMessage: string;
+  listFilter: string;
+  direction: number = -1;
+  isDesc: boolean;
+  column: string = "cityPopulation";
   private sub: Subscription;
 
   constructor(private route: ActivatedRoute, private router: Router,
@@ -39,5 +43,11 @@ export class ProvinceDetailComponent implements OnInit {
 
   onBack(): void {
     this.router.navigate(['/provinces']);
+  }
+
+  sort(property: string) {
+    this.isDesc = !this.isDesc; //change the direction    
+    this.column = property;
+    this.direction = this.isDesc ? 1 : -1;
   }
 }
