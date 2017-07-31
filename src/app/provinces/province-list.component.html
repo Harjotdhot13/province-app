@@ -1,20 +1,20 @@
   <div class="container">
-    <div class='col-sm-offset-2 col-sm-8'>
+    <div class="col-sm-offset-2 col-sm-8">
       
-      <div class='panel panel-primary'>
-        <div class='panel-heading'>List of Canadian provinces by population</div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">List of Canadian provinces by population</div>
         <div class="panel-body">
 
-          <div class='row' style="margin-bottom: 20px">
-            <div class='col-md-8' style="margin-bottom: 20px">
+          <div class="row" style="margin-bottom: 20px">
+            <div class="col-md-8" style="margin-bottom: 20px">
                 <span class="margin-right-4">Search:</span>
                 <span>
-                  <input type='text' [(ngModel)]='listFilter'/>
+                  <input type="text" [(ngModel)]="listFilter"/>
                 </span>
             </div>
           </div>
 
-          <div class='row'>
+          <div class="row">
             <div class="table-responsive">
               <table class="table table-striped table-bordered table-hover">
                 <thead class="thead-inverse">
@@ -49,9 +49,9 @@
           </div>
         </div>
 
-        <div class='panel-footer'>
-          <div class='row' *ngIf='listFilter'>
-            <div class='col-md-6'>
+        <div class="panel-footer">
+          <div class="row" *ngIf="listFilter">
+            <div class="col-md-6">
                 <h6>Filtered by: {{listFilter}} </h6>
             </div>
           </div>

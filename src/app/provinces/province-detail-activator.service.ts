@@ -10,7 +10,7 @@ export class ProvinceDetailActivator implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot) {
    const provinceExists = !!this.provinceService.getProvince(route.params['provinceCode']);
 
-    if(!provinceExists) {
+   if(!provinceExists) {
       this.router.navigate(['/404'])
     }
     return provinceExists;

@@ -12,6 +12,9 @@ import { Error404Component } from "./provinces/errors/404.component";
 import { ProvinceDetailActivator } from "./provinces/province-detail-activator.service";
 import { ProvinceFilterPipe } from "./provinces/province-filter.pipe";
 import { ProvinceSortPipe } from "./provinces/province-sort.pipe";
+import { ProvinceListResolver } from "./provinces/province-list-resolver";
+import { CityFilterPipe } from "./provinces/cities/city-filter.pipe";
+import { CitySortPipe } from "./provinces/cities/city-sort.pipe";
 
 @NgModule({
   imports: [ 
@@ -26,11 +29,14 @@ import { ProvinceSortPipe } from "./provinces/province-sort.pipe";
      ProvinceDetailComponent,
      Error404Component,
      ProvinceFilterPipe,
-     ProvinceSortPipe
+     ProvinceSortPipe,
+     CityFilterPipe,
+     CitySortPipe
   ],
   providers: [
     ProvinceService,
-    ProvinceDetailActivator
+    ProvinceDetailActivator,
+    ProvinceListResolver
   ],
   bootstrap: [ AppComponent ]
 })

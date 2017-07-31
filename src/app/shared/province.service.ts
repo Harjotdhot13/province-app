@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { IProvince, ICity } from './province.model'
-import { Http, Response } from "@angular/http";
-import { Observable } from "rxjs/Observable";
+import { IProvince} from './province.model';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
@@ -20,7 +20,7 @@ export class ProvinceService {
 
   getProvince(provinceCode: string): Observable<IProvince> {
     return this.getProvinces()
-      .map((provinces: IProvince[]) => provinces.find(p => p.provinceCode === provinceCode));
+      .map((provinces: IProvince[]) => provinces.find(p => provinceCode.indexOf(p.provinceCode) !== -1));
   }
 
   handleError(error: Response) {
