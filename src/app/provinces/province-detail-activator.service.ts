@@ -2,7 +2,6 @@ import { CanActivate, ActivatedRouteSnapshot, Router } from "@angular/router"
 import { Injectable } from "@angular/core";
 import { ProvinceService } from "../shared/province.service";
 
-
 @Injectable()
 export class ProvinceDetailActivator implements CanActivate {
   constructor(private provinceService: ProvinceService, private router: Router) {}
