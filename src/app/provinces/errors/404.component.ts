@@ -1,9 +1,9 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 
 @Component({
   template: `
     <h1 class="errorMessage">404'd</h1>
-    <h6 class="text-align-center">We are sorry. This page wasn't found on this server.</h6>
+    <h5 class="text-align-center">We are sorry. This page wasn't found on this server.</h5>
   `,
   styles: [`
     .errorMessage { 
@@ -18,6 +18,4 @@ import { Component } from '@angular/core'
     }
   `]
 })
-export class Error404Component{
-  constructor() {}
-}
+export class Error404Component { }

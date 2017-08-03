@@ -3,7 +3,6 @@ import { ProvinceService } from '../shared/province.service';
 import { IProvince } from '../shared/province.model';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
   templateUrl: 'app/provinces/province-list.component.html',
   styles: [`.heading-wrapper {margin-top: 60px;margin-bottom: 60px;background: #337ab7;
@@ -17,7 +16,6 @@ export class ProvinceListComponent implements OnInit {
   direction: number = -1;
   isDesc: boolean;
   column: string = 'provincePopulation';
-
 
   constructor(private provinceService: ProvinceService,  private route: ActivatedRoute) {
   }

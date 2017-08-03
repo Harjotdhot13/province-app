@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
-import { ProvinceService } from '../shared/province.service'
-import { IProvince } from "../shared/province.model";
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProvinceService } from '../shared/province.service';
+import { IProvince } from '../shared/province.model';
 import { Subscription }  from 'rxjs/Subscription';
 
 @Component({
   templateUrl: 'app/provinces/province-detail.component.html',
-  styles: ['.heading-wrapper {margin-top: 60px; margin-bottom: 60px; }']
+  styles: ['.heading-wrapper {margin-top: 60px; margin-bottom: 60px;}']
 })
 
 export class ProvinceDetailComponent implements OnInit {
@@ -15,7 +15,7 @@ export class ProvinceDetailComponent implements OnInit {
   listFilter: string;
   direction: number = -1;
   isDesc: boolean;
-  column: string = "cityPopulation";
+  column: string = 'cityPopulation';
   private sub: Subscription;
 
   constructor(private route: ActivatedRoute, private router: Router,
@@ -46,7 +46,7 @@ export class ProvinceDetailComponent implements OnInit {
   }
 
   sort(property: string) {
-    this.isDesc = !this.isDesc; //change the direction    
+    this.isDesc = !this.isDesc; // change the direction    
     this.column = property;
     this.direction = this.isDesc ? 1 : -1;
   }

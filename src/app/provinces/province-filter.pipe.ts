@@ -1,6 +1,5 @@
 import {  PipeTransform, Pipe } from '@angular/core';
-import { IProvince } from "../shared/province.model";
-
+import { IProvince } from '../shared/province.model';
 
 @Pipe({
     name: 'provinceFilter'
