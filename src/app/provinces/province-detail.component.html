@@ -32,7 +32,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let province of province.topCities |  cityFilter:listFilter | citySort: {property: column, direction: direction}">
+                <tr *ngFor="let province of province?.topCities |  cityFilter:listFilter | citySort: {property: column, direction: direction}">
                     <td>{{ province.cityName }}</td>  
                   <td>{{ province.cityPopulation }}</td>  
                 </tr>
