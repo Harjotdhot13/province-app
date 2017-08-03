@@ -16,7 +16,7 @@
         </div>
         <div class="row">
           <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover">
+            <table class="table table-striped table-bordered table-hover" *ngIf="province">
               <thead class="thead-inverse">
                 <tr>
                   <th class="pointer" (click)="sort('cityName')">Name
@@ -32,7 +32,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let province of province?.topCities |  cityFilter:listFilter | citySort: {property: column, direction: direction}">
+                <tr *ngFor="let province of province.topCities |  cityFilter:listFilter | citySort: {property: column, direction: direction}">
                     <td>{{ province.cityName }}</td>  
                   <td>{{ province.cityPopulation }}</td>  
                 </tr>
